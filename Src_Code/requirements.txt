@@ -4,5 +4,6 @@ pandas
 scikit_learn
 plotly
 opencv-python-headless
-
+tensorflow
+pillow
 
