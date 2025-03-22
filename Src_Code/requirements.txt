@@ -1,4 +1,5 @@
 streamlit
+streamlit-webrtc
 numpy
 pandas
 scikit_learn
