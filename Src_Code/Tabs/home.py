@@ -1,6 +1,10 @@
 import streamlit as st
+from PIL import Image
 
 def app():
+    # Load the image
+    image = Image.open("Src_Code/1.png")  # Replace with your actual path
+
     # Elegant CSS Styling
     st.markdown(
         """
@@ -58,6 +62,12 @@ def app():
             border-top: 1px solid #e0e0e0;
             margin: 2rem 0;
         }
+
+        /* Image styling */
+        .image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
         </style>
         """,
         unsafe_allow_html=True,
@@ -67,8 +77,13 @@ def app():
     st.markdown('<div class="main-container">', unsafe_allow_html=True)
 
     # Title and Subtitle
-    st.markdown('<div class="title">Stress Detection System</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle">Advanced Stress Analysis & Monitoring</div>', unsafe_allow_html=True)
+    st.markdown('<div class="title">Human Stress Detection System</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle">Stress Analysis & Monitoring</div>', unsafe_allow_html=True)
+
+    # Display the image below the title
+    st.markdown('<div class="image-container">', unsafe_allow_html=True)
+    st.image(image, use_container_width=True)  # Display the image
+    st.markdown('</div>', unsafe_allow_html=True)
 
     # Welcome Section
     st.markdown(
