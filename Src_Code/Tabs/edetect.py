@@ -115,7 +115,7 @@ def app():
     
     option = st.radio("Choose Input Method:", ["📷 Live Detection", "📁 Upload Image"])
     
-    if option == "📷 Live 10-Second Detection":
+    if option == "📷 Live Detection":
         if st.button("🎥 Start Live Detection"):
             detect_stress_from_webcam()
     else:
