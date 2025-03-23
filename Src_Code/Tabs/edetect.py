@@ -3,7 +3,6 @@ import cv2
 import numpy as np
 import tensorflow as tf
 import time
-import csv
 import pandas as pd
 import os
 
@@ -106,6 +105,17 @@ def analyze_results(results):
 
     if is_stressed:
         st.error("⚠️ You appear to be stressed!")
+        st.subheader("💡 Stress-Relief Tips")
+        tips = [
+            "🧘‍♂️ Take deep breaths and practice mindfulness.",
+            "🎶 Listen to calming music or nature sounds.",
+            "🚶‍♂️ Go for a short walk and get some fresh air.",
+            "📖 Take a short break and do something you enjoy.",
+            "💧 Stay hydrated and avoid excessive caffeine.",
+            "🛌 Try to get enough rest and sleep well.",
+        ]
+        for tip in tips:
+            st.write(tip)
     else:
         st.success("✅ You are not stressed.")
 
